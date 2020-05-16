@@ -1,0 +1,66 @@
+//HANOI:
+ public class Main {
+
+   public void solve(int n, String start, String aux, String end) {
+       if (n == 1) {
+           System.out.println(n+"-> "+start + " -> " + end);
+       } else {
+           solve(n - 1, start, end, aux);
+           System.out.println(n+"-> "+start + " -> " + end);
+           solve(n - 1, aux, start, end);
+       }
+   }
+
+   public static void main(String args[]) 
+    { 
+       Main towersOfHanoi = new Main();
+       towersOfHanoi.solve(3, "A", "B", "C");
+   }
+}
+
+//FACTORIAL:
+#include <stdio.h>
+factorial(long number){
+        
+    if(number<=1)
+        return 1;
+else
+    return number*factorial(number-1);
+}
+int main()
+{
+    int result;
+    result=factorial(3);
+    printf("%d",result);
+}
+
+//FIBONACCI:
+#include <stdio.h>
+
+fibonacci(long value){
+    if(value <=1)
+    return value;
+    else
+    return fibonacci(value-1)+fibonacci(value-2);
+}
+int main()
+{
+    printf("%d",fibonacci(9));
+
+}
+
+//COMBINATION
+#include <stdio.h>
+comb(int n, int m){
+    if(n==m||m==0)
+    
+    return 1;
+    else
+    return comb(n-1,m)+comb(n-1,m-1);
+}
+int main()
+{
+    printf("%d",comb(3,3));
+
+}
+
